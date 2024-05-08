@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { Authroutes } from './auth/routes';
+import { CategoryRoutes } from './category/router';
 
 
 
@@ -11,7 +13,8 @@ export class AppRoutes {
     const router = Router();
     
     // Definir las rutas
-    // router.use('/api/todos', /*TodoRoutes.routes */ );
+    router.use('/api/auth', Authroutes.routes);
+    router.use('/api/categories', CategoryRoutes.routes);
 
 
 
