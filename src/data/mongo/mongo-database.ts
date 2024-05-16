@@ -23,7 +23,9 @@ export class mongoDatabase{
             console.log(`mongo not conect ${error}`)
             throw error;
         }
+    }
 
-
+    static async disconnect(){
+        await mongoose.disconnect();
     }
 }

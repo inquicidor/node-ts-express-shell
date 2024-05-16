@@ -1,0 +1,29 @@
+
+
+
+export class FileUploadService{
+
+    constructor(){}
+
+
+    private checkFolder(folderPath:string){
+        throw new Error('Not implement');
+    }
+
+    uploadSingle(
+        file:string,
+        folder:string = 'uploads',
+        validExtensions:string[] = ['png', 'jpg', 'jpeg', 'gif']
+    ){
+
+    }
+    
+    uploadMultiple(
+        file:string[],
+        folder:string = 'uploads',
+        validExtensions:string[] = ['png', 'jpg', 'jpeg', 'gif']
+    ){
+        
+    }
+
+}

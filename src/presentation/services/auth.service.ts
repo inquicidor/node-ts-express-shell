@@ -20,7 +20,7 @@ export class AuthService{
             const user = new UserModel(regsiterUserDto);
 
 
-            user.password =  bcryptAdapter.hast(regsiterUserDto.password);
+            user.password =  bcryptAdapter.hash(regsiterUserDto.password);
             await user.save();
 
             await this.sendEmailValidation(user.email);
